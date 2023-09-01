@@ -10,8 +10,8 @@
 				display: inline-block;
 				width: 20px;
 				height: 75px;	/* Gets overridden by D3-assigned height below */
-				margin-right: 2px;
-				background-color: teal;
+				margin-right: 3px;
+				background-color: rgb(104, 169, 169);
 			}
 		
 		</style>
@@ -19,7 +19,7 @@
 	<body>
 		<script type="text/javascript">
 		
-			var dataset = [ 25, 7, 5, 26, 11 ];
+			var dataset = [ 25, 17.7, 5, 26, 11 ];
 			
 			d3.select("body").selectAll("div")
 				.data(dataset)
@@ -27,8 +27,8 @@
 				.append("div")
 				.attr("class", "bar")
 				.style("height", function(d) {
-					var barHeight = d * 5;
-					return barHeight + "px";
+					var barHeight = d ;
+					return barHeight + "mm";
 				});
 			
 		</script>
